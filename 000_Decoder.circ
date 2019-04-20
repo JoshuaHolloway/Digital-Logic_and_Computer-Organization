@@ -136,6 +136,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(180,780)" name="Pin">
       <a name="tristate" val="false"/>
+      <a name="label" val="Enable"/>
     </comp>
     <comp lib="1" loc="(200,230)" name="NOT Gate">
       <a name="facing" val="north"/>
@@ -191,11 +192,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(180,820)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="Input"/>
     </comp>
     <comp lib="0" loc="(320,710)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
+      <a name="label" val="Output"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(180,490)" name="NOT Gate">
