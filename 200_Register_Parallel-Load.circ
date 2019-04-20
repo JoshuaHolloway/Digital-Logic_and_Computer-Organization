@@ -738,87 +738,93 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <text font-family="Consolas" font-size="8" text-anchor="middle" x="109" y="61">i0</text>
       <text font-family="Consolas" font-size="8" text-anchor="middle" x="109" y="84">q0</text>
       <text font-family="Consolas" font-size="8" text-anchor="middle" x="89" y="84">q1</text>
-      <circ-port height="8" pin="80,80" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="80,140" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="120,50" width="8" x="86" y="46"/>
-      <circ-port height="8" pin="210,50" width="8" x="106" y="46"/>
-      <circ-port height="10" pin="180,180" width="10" x="85" y="85"/>
-      <circ-port height="10" pin="270,180" width="10" x="105" y="85"/>
+      <circ-port height="8" pin="260,90" width="8" x="86" y="46"/>
+      <circ-port height="8" pin="350,90" width="8" x="106" y="46"/>
+      <circ-port height="8" pin="190,110" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="330,220" width="10" x="85" y="85"/>
+      <circ-port height="10" pin="420,220" width="10" x="105" y="85"/>
+      <circ-port height="8" pin="190,180" width="8" x="46" y="76"/>
       <circ-anchor facing="south" height="6" width="6" x="107" y="87"/>
     </appear>
-    <wire from="(220,60)" to="(220,70)"/>
-    <wire from="(130,60)" to="(130,70)"/>
-    <wire from="(130,60)" to="(180,60)"/>
-    <wire from="(220,60)" to="(270,60)"/>
-    <wire from="(270,60)" to="(270,140)"/>
-    <wire from="(100,120)" to="(100,140)"/>
-    <wire from="(120,50)" to="(120,70)"/>
-    <wire from="(190,120)" to="(190,140)"/>
-    <wire from="(180,60)" to="(180,80)"/>
-    <wire from="(210,50)" to="(210,70)"/>
-    <wire from="(160,80)" to="(160,110)"/>
-    <wire from="(90,80)" to="(90,110)"/>
-    <wire from="(190,140)" to="(220,140)"/>
-    <wire from="(100,140)" to="(130,140)"/>
-    <wire from="(100,120)" to="(190,120)"/>
-    <wire from="(180,140)" to="(180,180)"/>
-    <wire from="(270,140)" to="(270,180)"/>
-    <wire from="(80,140)" to="(100,140)"/>
-    <wire from="(160,80)" to="(180,80)"/>
-    <wire from="(260,140)" to="(270,140)"/>
-    <wire from="(170,140)" to="(180,140)"/>
-    <wire from="(180,80)" to="(190,80)"/>
-    <wire from="(210,160)" to="(220,160)"/>
-    <wire from="(120,160)" to="(130,160)"/>
-    <wire from="(90,80)" to="(100,80)"/>
-    <wire from="(80,80)" to="(90,80)"/>
-    <wire from="(90,110)" to="(160,110)"/>
-    <wire from="(120,100)" to="(120,160)"/>
-    <wire from="(180,80)" to="(180,140)"/>
-    <wire from="(210,100)" to="(210,160)"/>
-    <comp lib="0" loc="(180,180)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="label" val="q1"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="6" loc="(193,245)" name="Text">
-      <a name="text" val="2-bit Parallel-Load Register"/>
-      <a name="font" val="Consolas bold 24"/>
-    </comp>
-    <comp lib="0" loc="(210,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="i0"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="0" loc="(120,50)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="i1"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp loc="(210,100)" name="2x1_MUX">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(80,140)" name="Pin">
+    <wire from="(270,130)" to="(270,200)"/>
+    <wire from="(360,130)" to="(360,200)"/>
+    <wire from="(190,180)" to="(250,180)"/>
+    <wire from="(260,90)" to="(260,100)"/>
+    <wire from="(280,90)" to="(280,100)"/>
+    <wire from="(350,90)" to="(350,100)"/>
+    <wire from="(370,90)" to="(370,100)"/>
+    <wire from="(340,160)" to="(340,180)"/>
+    <wire from="(250,160)" to="(250,180)"/>
+    <wire from="(420,150)" to="(420,180)"/>
+    <wire from="(320,110)" to="(320,140)"/>
+    <wire from="(330,150)" to="(330,180)"/>
+    <wire from="(230,110)" to="(230,140)"/>
+    <wire from="(250,180)" to="(280,180)"/>
+    <wire from="(250,160)" to="(340,160)"/>
+    <wire from="(230,140)" to="(320,140)"/>
+    <wire from="(300,150)" to="(330,150)"/>
+    <wire from="(340,180)" to="(370,180)"/>
+    <wire from="(390,150)" to="(420,150)"/>
+    <wire from="(320,110)" to="(340,110)"/>
+    <wire from="(280,90)" to="(300,90)"/>
+    <wire from="(370,90)" to="(390,90)"/>
+    <wire from="(330,180)" to="(330,220)"/>
+    <wire from="(420,180)" to="(420,220)"/>
+    <wire from="(230,110)" to="(250,110)"/>
+    <wire from="(410,180)" to="(420,180)"/>
+    <wire from="(320,180)" to="(330,180)"/>
+    <wire from="(270,200)" to="(280,200)"/>
+    <wire from="(360,200)" to="(370,200)"/>
+    <wire from="(190,110)" to="(200,110)"/>
+    <wire from="(220,110)" to="(230,110)"/>
+    <wire from="(300,90)" to="(300,150)"/>
+    <wire from="(390,90)" to="(390,150)"/>
+    <comp lib="0" loc="(190,180)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="4" loc="(170,140)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(260,140)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(80,80)" name="Pin">
+    <comp lib="0" loc="(340,120)" name="Constant"/>
+    <comp lib="4" loc="(320,180)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(260,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="i1"/>
+    </comp>
+    <comp lib="1" loc="(220,110)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="6" loc="(344,283)" name="Text">
+      <a name="text" val="2-bit Parallel-Load Register"/>
+      <a name="font" val="Consolas bold 24"/>
+    </comp>
+    <comp lib="0" loc="(330,220)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="q1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(350,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="i0"/>
+    </comp>
+    <comp lib="0" loc="(250,120)" name="Constant"/>
+    <comp lib="4" loc="(410,180)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(190,110)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="load"/>
     </comp>
-    <comp loc="(120,100)" name="2x1_MUX">
+    <comp lib="2" loc="(270,130)" name="Multiplexer">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(270,180)" name="Pin">
+    <comp lib="2" loc="(360,130)" name="Multiplexer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(420,220)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
       <a name="label" val="q0"/>
-      <a name="labelloc" val="south"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
