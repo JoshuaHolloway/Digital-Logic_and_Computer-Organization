@@ -104,7 +104,7 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="107" y="81">RegFile</text>
       <circ-anchor facing="east" height="6" width="6" x="147" y="77"/>
     </appear>
-    <comp loc="(760,440)" name="regfile"/>
+    <comp loc="(610,290)" name="regfile"/>
   </circuit>
   <circuit name="reg">
     <a name="circuit" val="reg"/>
