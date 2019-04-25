@@ -51,7 +51,7 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="reg"/>
+  <main name="reg32"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -83,8 +83,8 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="reg">
-    <a name="circuit" val="reg"/>
+  <circuit name="reg32">
+    <a name="circuit" val="reg32"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -108,23 +108,23 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <wire from="(180,160)" to="(400,160)"/>
     <wire from="(290,180)" to="(400,180)"/>
     <wire from="(290,200)" to="(400,200)"/>
-    <comp lib="0" loc="(180,160)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="D"/>
-    </comp>
-    <comp lib="0" loc="(290,180)" name="Pin">
-      <a name="label" val="reg_on_off"/>
-    </comp>
-    <comp lib="4" loc="(400,130)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="reg"/>
-    </comp>
     <comp lib="0" loc="(550,160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
       <a name="label" val="Q"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(180,160)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="4" loc="(400,130)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="reg"/>
+    </comp>
+    <comp lib="0" loc="(290,180)" name="Pin">
+      <a name="label" val="reg_on_off"/>
     </comp>
     <comp lib="0" loc="(290,200)" name="Pin">
       <a name="label" val="clk"/>
