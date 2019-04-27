@@ -179,20 +179,11 @@ end TCL_Generic;&#13;
     <wire from="(610,240)" to="(610,290)"/>
     <wire from="(320,240)" to="(360,240)"/>
     <wire from="(600,290)" to="(610,290)"/>
-    <comp loc="(290,240)" name="bits_2_to_25"/>
-    <comp lib="4" loc="(360,230)" name="ROM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 24 32
-0 8e930004
-</a>
+    <comp lib="0" loc="(310,310)" name="Probe">
+      <a name="radix" val="16"/>
     </comp>
-    <comp lib="8" loc="(468,185)" name="Text">
-      <a name="text" val="NxM=24x32=&lt;Address-Bits&gt;x&lt;Data-Bits&gt;"/>
-      <a name="font" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="8" loc="(470,169)" name="Text">
-      <a name="text" val="Data Bit-Width = M=32"/>
+    <comp lib="8" loc="(470,153)" name="Text">
+      <a name="text" val="Address Bit-Width = N=24 = 2^24=~16-Million-Addresses"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
     <comp lib="0" loc="(650,240)" name="Pin">
@@ -202,34 +193,43 @@ end TCL_Generic;&#13;
       <a name="label" val="instruction"/>
       <a name="labelloc" val="south"/>
     </comp>
+    <comp loc="(290,240)" name="bits_2_to_25"/>
+    <comp lib="0" loc="(190,240)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="fetch_addr"/>
+    </comp>
+    <comp lib="8" loc="(322,234)" name="Text">
+      <a name="text" val="address"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(190,310)" name="Probe">
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(650,300)" name="Probe">
+      <a name="facing" val="west"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="8" loc="(468,185)" name="Text">
+      <a name="text" val="NxM=24x32=&lt;Address-Bits&gt;x&lt;Data-Bits&gt;"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="4" loc="(360,230)" name="ROM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 24 32
+0 8e930004 8e930008 8e93000c 8e930010 8e930014
+</a>
+    </comp>
+    <comp lib="8" loc="(470,169)" name="Text">
+      <a name="text" val="Data Bit-Width = M=32"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="0" loc="(320,380)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
       <a name="width" val="24"/>
       <a name="label" val="address"/>
       <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(190,240)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_addr"/>
-    </comp>
-    <comp lib="8" loc="(470,153)" name="Text">
-      <a name="text" val="Address Bit-Width = N=24 = 2^24=~16-Million-Addresses"/>
-      <a name="font" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="8" loc="(322,234)" name="Text">
-      <a name="text" val="address"/>
-      <a name="font" val="SansSerif bold 14"/>
-    </comp>
-    <comp lib="0" loc="(650,300)" name="Probe">
-      <a name="facing" val="west"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(190,310)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(310,310)" name="Probe">
-      <a name="radix" val="16"/>
     </comp>
   </circuit>
   <circuit name="bits_2_to_25">
@@ -248,12 +248,6 @@ end TCL_Generic;&#13;
     </appear>
     <wire from="(250,310)" to="(280,310)"/>
     <wire from="(210,320)" to="(230,320)"/>
-    <comp lib="0" loc="(280,310)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="24"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(230,320)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="32"/>
@@ -289,6 +283,12 @@ end TCL_Generic;&#13;
       <a name="bit29" val="none"/>
       <a name="bit30" val="none"/>
       <a name="bit31" val="none"/>
+    </comp>
+    <comp lib="0" loc="(280,310)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="24"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="8" loc="(260,256)" name="Text">
       <a name="text" val="32-bits -&gt; 24-bits"/>
