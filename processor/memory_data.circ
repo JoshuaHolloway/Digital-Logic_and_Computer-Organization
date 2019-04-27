@@ -113,7 +113,7 @@ end TCL_Generic;&#13;
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="instruction_memory"/>
+  <main name="memory_data"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -145,8 +145,8 @@ end TCL_Generic;&#13;
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="instruction_memory">
-    <a name="circuit" val="instruction_memory"/>
+  <circuit name="memory_data">
+    <a name="circuit" val="memory_data"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -155,81 +155,98 @@ end TCL_Generic;&#13;
     <appear>
       <rect fill="none" height="70" stroke="#000000" stroke-width="2" width="180" x="50" y="40"/>
       <text font-family="Consolas" font-size="10" text-anchor="middle" x="84" y="83">fetch_addr</text>
-      <text font-family="Consolas" font-size="10" text-anchor="middle" x="192" y="83">instruction</text>
-      <text font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="139" y="69">24-bit Address to 32-bit Instruction</text>
-      <text font-family="Consolas" font-size="12" font-weight="bold" text-anchor="middle" x="136" y="54">Instruction-Memory</text>
-      <text font-family="Consolas" font-size="10" text-anchor="middle" x="140" y="102">address</text>
-      <circ-port height="10" pin="650,240" width="10" x="225" y="75"/>
-      <circ-port height="8" pin="190,240" width="8" x="46" y="76"/>
-      <circ-port height="10" pin="320,380" width="10" x="135" y="105"/>
+      <text font-family="Consolas" font-size="10" text-anchor="middle" x="199" y="83">read_data</text>
+      <text font-family="SansSerif" font-size="10" font-weight="bold" text-anchor="middle" x="139" y="69">24-bit Address to 32-bit Data</text>
+      <text font-family="Consolas" font-size="12" font-weight="bold" text-anchor="middle" x="136" y="54">Data-Memory</text>
+      <text font-family="Consolas" font-size="10" text-anchor="middle" x="84" y="93">write_data</text>
+      <polyline fill="none" points="220,105 224,109" stroke="#000000"/>
+      <polyline fill="none" points="216,110 220,105" stroke="#000000"/>
+      <text font-family="Consolas" font-size="10" text-anchor="middle" x="90" y="103">write_enable</text>
+      <text font-family="Consolas" font-size="10" text-anchor="middle" x="170" y="103">address</text>
+      <circ-port height="8" pin="160,240" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="370,470" width="8" x="46" y="86"/>
+      <circ-port height="10" pin="650,470" width="10" x="225" y="75"/>
+      <circ-port height="8" pin="110,340" width="8" x="216" y="106"/>
+      <circ-port height="8" pin="110,380" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="290,340" width="10" x="165" y="105"/>
       <circ-anchor facing="east" height="6" width="6" x="227" y="77"/>
     </appear>
-    <wire from="(320,240)" to="(320,310)"/>
-    <wire from="(320,310)" to="(320,380)"/>
-    <wire from="(630,300)" to="(650,300)"/>
-    <wire from="(630,240)" to="(650,240)"/>
-    <wire from="(610,240)" to="(630,240)"/>
-    <wire from="(200,240)" to="(200,310)"/>
-    <wire from="(290,240)" to="(320,240)"/>
-    <wire from="(310,310)" to="(320,310)"/>
-    <wire from="(190,240)" to="(200,240)"/>
-    <wire from="(630,240)" to="(630,300)"/>
-    <wire from="(190,310)" to="(200,310)"/>
-    <wire from="(200,240)" to="(210,240)"/>
-    <wire from="(610,240)" to="(610,290)"/>
-    <wire from="(320,240)" to="(360,240)"/>
-    <wire from="(600,290)" to="(610,290)"/>
-    <comp lib="0" loc="(650,300)" name="Probe">
-      <a name="facing" val="west"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="8" loc="(470,153)" name="Text">
-      <a name="text" val="Address Bit-Width = N=24 = 2^24=~16-Million-Addresses"/>
-      <a name="font" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="0" loc="(190,240)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_addr"/>
-    </comp>
-    <comp lib="0" loc="(650,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="instruction"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="0" loc="(310,310)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="4" loc="(360,230)" name="ROM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 24 32
-0 8e93ffe8
-</a>
-    </comp>
-    <comp lib="0" loc="(190,310)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="8" loc="(468,185)" name="Text">
+    <wire from="(290,240)" to="(290,340)"/>
+    <wire from="(260,240)" to="(290,240)"/>
+    <wire from="(360,290)" to="(390,290)"/>
+    <wire from="(370,280)" to="(390,280)"/>
+    <wire from="(370,300)" to="(390,300)"/>
+    <wire from="(160,240)" to="(180,240)"/>
+    <wire from="(370,260)" to="(370,280)"/>
+    <wire from="(370,300)" to="(370,320)"/>
+    <wire from="(360,320)" to="(370,320)"/>
+    <wire from="(360,260)" to="(370,260)"/>
+    <wire from="(380,320)" to="(390,320)"/>
+    <wire from="(370,470)" to="(380,470)"/>
+    <wire from="(380,320)" to="(380,470)"/>
+    <wire from="(110,340)" to="(120,340)"/>
+    <wire from="(110,380)" to="(120,380)"/>
+    <wire from="(290,240)" to="(390,240)"/>
+    <wire from="(630,320)" to="(640,320)"/>
+    <wire from="(640,470)" to="(650,470)"/>
+    <wire from="(640,320)" to="(640,470)"/>
+    <comp lib="8" loc="(210,62)" name="Text">
       <a name="text" val="NxM=24x32=&lt;Address-Bits&gt;x&lt;Data-Bits&gt;"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
-    <comp loc="(290,240)" name="bits_2_to_25"/>
-    <comp lib="8" loc="(322,234)" name="Text">
-      <a name="text" val="address"/>
-      <a name="font" val="SansSerif bold 14"/>
+    <comp lib="0" loc="(110,340)" name="Pin"/>
+    <comp lib="0" loc="(120,340)" name="Tunnel">
+      <a name="label" val="clk"/>
     </comp>
-    <comp lib="8" loc="(470,169)" name="Text">
-      <a name="text" val="Data Bit-Width = M=32"/>
-      <a name="font" val="SansSerif bold 16"/>
+    <comp lib="0" loc="(650,470)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Read_Data"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="0" loc="(320,380)" name="Pin">
+    <comp lib="0" loc="(360,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(290,340)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
       <a name="width" val="24"/>
       <a name="label" val="address"/>
       <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(370,470)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="Write_Data"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="8" loc="(212,46)" name="Text">
+      <a name="text" val="Data Bit-Width = M=32"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="0" loc="(360,290)" name="Constant"/>
+    <comp lib="0" loc="(110,380)" name="Pin"/>
+    <comp loc="(260,240)" name="bits_2_to_25"/>
+    <comp lib="4" loc="(390,230)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+      <a name="databus" val="bibus"/>
+    </comp>
+    <comp lib="0" loc="(120,380)" name="Tunnel">
+      <a name="label" val="Write_En"/>
+    </comp>
+    <comp lib="8" loc="(212,30)" name="Text">
+      <a name="text" val="Address Bit-Width = N=24 = 2^24=~16-Million-Addresses"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="0" loc="(360,260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Write_En"/>
+    </comp>
+    <comp lib="0" loc="(160,240)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="Address"/>
     </comp>
   </circuit>
   <circuit name="bits_2_to_25">
@@ -248,15 +265,15 @@ end TCL_Generic;&#13;
     </appear>
     <wire from="(250,310)" to="(280,310)"/>
     <wire from="(210,320)" to="(230,320)"/>
-    <comp lib="0" loc="(210,320)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_address"/>
-    </comp>
     <comp lib="0" loc="(280,310)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="24"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(210,320)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="label" val="fetch_address"/>
     </comp>
     <comp lib="0" loc="(230,320)" name="Splitter">
       <a name="fanout" val="1"/>
