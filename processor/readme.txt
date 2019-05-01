@@ -110,7 +110,7 @@ program_05:
   Step 2: Write value to memory
   Step 3: Read value from memory into register
 
-    addi $s0, $zero, 1  ; 0x(22-00-00-01) // Step 1
+    addi $s0, $zero, 1  ; 0x(20-10-00-01) // Step 1
     sw $s0, 24($zero)   ; 0x(AD-10-00-18) // Step 2
     lw $s1, 24($zero)   ; 0x(8C-11-00-18) // Step 3
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -122,14 +122,14 @@ Instruction-1:
   op    |   rs   |   rt   | imm
 [31:26]  [25:21]  [20:16]   [15:0]
  6-bits | 5-bits | 5-bits | 16-bits
-  addi  |   $s0  |  $zer0 |  1
-   8    |   16   |    0   |  1
-00-1000   1-0000   0-0000   0000-0000-0000-0001
+  addi  | $zero  |  $s0   |  1
+   8    |   0    |  16    |  1
+00-1000   0-0000   1-0000   0000-0000-0000-0001
 
-0010 00ss ssst tttt iiii iiii iiii iiii  [addi]
-0010-0010-0000-0000-0000-0000-0000-0001
- 2    2    0    0    0    0    0    1
- 0x(22-00-00-01)
+0010-00ss-ssst-tttt-iiii-iiii-iiii-iiii  [addi]
+0010-0000-0001-0000-0000-0000-0000-0001
+ 2    0    1    0    0    0    0    1
+ 0x(20-10-00-01)
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Instruction-2:
   sw  $s0,  24($zero)
@@ -145,7 +145,7 @@ Instruction-1:
 
 1010 11ss ssst tttt iiii iiii iiii iiii [sw]
 1010-1100-0001-0000-0000-0000-0001-1000
- A    D    1    0    0    0    1    8
+ A    C    1    0    0    0    1    8
  0x(AD-10-00-18)
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
