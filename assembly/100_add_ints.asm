@@ -9,3 +9,4 @@
     
     li $v0, 1		# Prepare system to print out integer
     add $a0, $zero, $t2
+    syscall
